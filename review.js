@@ -61,6 +61,7 @@ data.forEach(detail => {
     const{name,profile_path} =detail;
     const det = document.createElement('div');
     det.classList.add('ActorImages');
+    if(profile_path){
     det.innerHTML =`
      <img src="${IMG_URL+profile_path}" alt= ${name}>
      <div class="ActorName" >
@@ -68,10 +69,17 @@ data.forEach(detail => {
       </div>
      `
      main.appendChild(det);
+    }
 });
     
 }
 
+document.getElementById("Back").addEventListener('click', () => {
+    onClick()
+    })
+    function onClick(){
+        document.location.href="index.html";
+      }
 
 
 

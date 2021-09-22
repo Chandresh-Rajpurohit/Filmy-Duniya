@@ -294,3 +294,5 @@ function pageCall(page){
     getMovies(url);
   }
 }
+
+

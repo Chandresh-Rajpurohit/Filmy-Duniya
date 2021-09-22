@@ -16,6 +16,9 @@ body{
 /* background-blend-mode: lighten; */
     font-family: 'Poppins', sans-serif;
     margin: 0;
+
+    position: relative;
+    
 }
 
 
@@ -51,6 +54,7 @@ border-bottom: 3px solid rgb(240, 237, 237);
 
 main{
     display:flex;
+  
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -150,12 +154,13 @@ cursor: pointer;
 }
 
 #tags{
-    width:80%;
+    width:auto;
+   margin-left: 13%;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 10px auto;
+    /* margin: 10px 10px; */
 }
 
 .tag{
@@ -226,74 +231,6 @@ cursor: pointer;
     color: black;
     border:4px solid rgb(12, 12, 12);
 }
-/* The Overlay (background)
-.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    /* height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    /* z-index: 1; Sit on top */
-    /* left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); Black fallback color */
-    /* background-color: rgba(0,0,0, 0.9); Black w/opacity */
-    /* overflow-x: hidden; /* Disable horizontal scroll */
-    /* transition: 0.5s; 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */ */
-  /* }  */
-  
-  /* Position the content inside the overlay */
-  /* .overlay-content {
-    position: relative;
-    top: 10%; /* 25% from the top */
-    /* width: 100%; 100% width */
-    /* text-align: center; Centered text/links */
-    /* margin-top: 30px; 30px top margin to avoid conflict with the close button on smaller screens */
-  /* } */
-  
-  /* The navigation links inside the overlay */
-  /* .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block; /* Display block instead of inline */
-    /* transition: 0.3s; Transition effects on hover (color) */
-  /* }  */
-  
-  /* When you mouse over the navigation links, change their color */
-  /* .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-   */
-  /* Position the close button (top right corner) */
-  /* .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  } */
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  /* @media screen and (max-height: 450px) { */
-    /* .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    } */
-    /* .movie-info{
-        color: white;
-    }
-  }
-
-
-  .embed.hide{
-      display: none;
-  }
-
-  .embed.show{
-      display: inline-block;
-  } */
 
   .arrow{
       position: absolute;
@@ -330,3 +267,100 @@ cursor: pointer;
 .dots .dot.active{
     border-color: orange;
 }
+
+
+
+
+
+
+.sidebar{
+    position: absolute;
+    width: 250px;
+    left: -250px;
+    height: 21%;
+    background:transparent;
+  border: 3px solid black;
+    transition: all 0.5s ease;
+  }
+  .sidebar header{
+    font-size: 24px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    background: #1b1b1b;
+   
+    font-family: 'Montserrat', sans-serif;
+  }
+  .sidebar a{
+    border: 2px solid white;
+    display: block;
+    height: 65px;
+    border-radius: 20px;
+    margin-right: 3px;
+    width: 90%;
+    color: white;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    padding:0.2 rem;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .5s ease;
+    margin-top:1rem ;
+    margin-left: 5px;
+    
+  }
+  a.active,a:hover{
+    border-radius: 20px;
+   
+    color: #fc0202;
+  }
+  .sidebar a i{
+    font-size: 17px;
+    margin-right: 16px;
+  }
+  .sidebar a span{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  #check{
+    display: none;
+  }
+  label #btn,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #262626;
+    margin: 15px 30px;
+    font-size: 29px;
+    background: #262626;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: all .5s ease;
+  }
+  label #cancel{
+    opacity: 0;
+    visibility: hidden;
+  }
+  #check:checked ~ .sidebar{
+    left: 0;
+  }
+  #check:checked ~ main{
+      margin-left: 255px;
+  }
+  #check:checked ~ #tags{
+    margin-left: 267px;
+}
+  #check:checked ~ label #btn{
+    margin-left: 255px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #check:checked ~ label #cancel{
+    margin-left: 255px;
+    opacity: 1;
+    visibility: visible;
+  }
+  

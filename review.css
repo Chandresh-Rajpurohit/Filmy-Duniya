@@ -33,12 +33,42 @@ justify-content: center;
     margin-top: 1rem;
     overflow: hidden; 
  }  
+ .Back{
+    font-size: 20px;
+    padding: 0.4rem;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: rgb(249, 253, 249);
+    color: rgb(248, 248, 248);
+    margin-top: 1.5rem ;
+    margin-left: 89%;
+    display: block;
+
+font-weight: bold;
+}
+.Back img:hover{
+    cursor: pointer;
+}
+.Back:hover{
+  font-weight: bold;
+    font-size: 20px;
+    padding: 0.4rem;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: rgb(255, 254, 254);
+    color: rgb(17, 17, 17);
+    margin-top: 1.5rem ;
+    margin-left: 89%;
+    display: block;
+cursor: pointer;
+}
 
 
 .movieDetails img{
     box-shadow: 12px 14px 10px black; 
-    height: 50%;
-   width: 60%;
+    
+   width: 65%;
+   margin-left: 10%;
    display: block;
     margin-left: auto ;
     margin-right: auto;
@@ -57,8 +87,8 @@ justify-content: center;
     background-color: darkgoldenrod ;
     border: 3px solid black;
     margin-left: auto;
-    margin-right: auto;
     width: fit-content;
+    margin-right: auto;
     border-radius: 30px;
 }
 

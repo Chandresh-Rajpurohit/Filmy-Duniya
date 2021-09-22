@@ -80,6 +80,12 @@ function myOnClick(){
   document.location.href="review.html";
 }
 
+document.getElementById("Back").addEventListener('click', () => {
+onClick()
+})
+function onClick(){
+    document.location.href="index.html";
+  }
 
 function getColor(vote) {
     if(vote>= 8){
